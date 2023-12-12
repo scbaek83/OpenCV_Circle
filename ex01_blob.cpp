@@ -46,6 +46,11 @@ int main()
         // Circle outline 
         int radius = c[2]; 
         circle(src, center, radius, Scalar(0, 0, 255), 1, LINE_AA); 
+
+        char str[32]; 
+        snprintf(str, 32, "x:%d y:%d r:%d",c[0], c[1], radius); 
+        putText(src, str, Point(c[0] -100, c[1] - radius-10), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 0), 2);
+
     }
 
     imshow("origin", org);
