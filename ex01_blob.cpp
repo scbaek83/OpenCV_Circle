@@ -50,8 +50,10 @@ int main()
         char str[32]; 
         snprintf(str, 32, "x:%d y:%d r:%d",c[0], c[1], radius); 
         putText(src, str, Point(c[0] -100, c[1] - radius-10), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 0), 2);
-
     }
+
+    line(src, Point(300, 500), Point(600, 500), Scalar(0, 255, 0), 3);
+    line(src, Point(300, 1500), Point(600, 1500), Scalar(0, 255, 0), 3);
 
     imshow("origin", org);
     imshow("gray", gray);
